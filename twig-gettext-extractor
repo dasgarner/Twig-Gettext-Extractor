@@ -40,9 +40,10 @@ $twig->addExtension(new Symfony\Bridge\Twig\Extension\FormExtension(
 ));
 // You can add more extensions here.
 $twig->addExtension(new \Slim\Views\TwigExtension());
-$twig->addExtension(new Twig_Extensions_Extension_I18n());
-$twig->addExtension(new \Xibo\Helper\ByteFormatterTwigExtension());
-$twig->addExtension(new \Xibo\Helper\UrlDecodeTwigExtension());
+$twig->addExtension(new \Xibo\Twig\TransExtension());
+$twig->addExtension(new \Xibo\Twig\ByteFormatterTwigExtension());
+$twig->addExtension(new \Xibo\Twig\UrlDecodeTwigExtension());
+$twig->addExtension(new \Xibo\Twig\DateFormatTwigExtension());
 
 array_shift($_SERVER['argv']);
 $addTemplate = false;
